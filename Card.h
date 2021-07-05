@@ -1,0 +1,10 @@
+#ifndef PROJECTPORTFOLIO_CARD_H
+#define PROJECTPORTFOLIO_CARD_H
+
+
+class Card {
+
+};
+
+
+#endif //PROJECTPORTFOLIO_CARD_H

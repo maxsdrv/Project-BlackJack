@@ -1,0 +1,10 @@
+#ifndef PROJECTPORTFOLIO_HAND_H
+#define PROJECTPORTFOLIO_HAND_H
+
+
+class Hand {
+
+};
+
+
+#endif //PROJECTPORTFOLIO_HAND_H
