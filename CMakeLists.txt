@@ -3,7 +3,7 @@ project(ProjectPortfolio)
 
 set(CMAKE_CXX_STANDARD 14)
 
-#include_directories(include)
+include_directories(include)
 
 set(SOURCE_FILES
         main.cpp
@@ -16,6 +16,7 @@ set(HEADER_FILES
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 
+#[[
 target_include_directories(${PROJECT_NAME}
                              PUBLIC ${HEADER_FILES}
-                             ${SOURCE_FILES})
+                             ${SOURCE_FILES})]]
