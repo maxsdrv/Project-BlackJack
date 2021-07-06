@@ -6,6 +6,7 @@
 int main() {
     Card d;
     std::cout << d;
+    Hand hand;
 
     return 0;
 }
