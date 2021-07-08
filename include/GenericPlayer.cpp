@@ -5,7 +5,7 @@
 GenericPlayer::GenericPlayer(std::string name) : m_Name(std::move(name)) {}
 
 bool GenericPlayer::isBusted() const {
-    return (GetValue() > 21);
+    return (GetTotal() > 21);
 }
 
 void GenericPlayer::Bust() const {

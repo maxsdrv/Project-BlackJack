@@ -7,7 +7,7 @@ void Card::Flip() {
     m_PositionUp = !(m_PositionUp);
 }
 
-int Card::GetValue() const {
+int Card::GetTotal() const {
     int value = 0;
     if (m_PositionUp) {
         value = static_cast<int>(m_Rank);
@@ -31,4 +31,16 @@ std::ostream &operator<<(std::ostream &os, const Card& card) {
     }
 
     return os;
+}
+
+std::pair<size_t, std::string> Card::rangCard(Card::rank r) {
+    static std::unordered_map<Card::rank, std::pair<size_t, std::string>> ranks = {
+            {rank::KING, {4, "KING"}}
+
+    };
+    std::pair<size_t, std::string> result;
+    for (const auto& [key, value] : ranks) {
+        result = value;
+    }
+    return result;
 }

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 class Card {
 public:
@@ -18,7 +19,8 @@ public:
     };
     explicit Card(rank r = rank::ACE, suit s = suit::SPADES, bool pos = true);
     void Flip();
-    [[nodiscard]]int GetValue() const;
+    [[nodiscard]]int GetTotal() const;
+    std::pair<size_t, std::string> rangCard(rank r);
 
     friend std::ostream& operator<<(std::ostream& os, const Card& card);
 private:

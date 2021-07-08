@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 project(ProjectPortfolio)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include)
 
@@ -16,7 +16,7 @@ set(HEADER_FILES
         include/Hand.h
         include/Card.h
         include/GenericPlayer.h
-        include/Player.h include/GenericPlayer.cpp include/Player.cpp)
+        include/Player.h)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 

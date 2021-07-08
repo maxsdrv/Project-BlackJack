@@ -9,7 +9,7 @@ public:
     virtual ~Hand();
     void Add(Card* pCard);
     void Clear();
-    int GetValue() const;
+    [[nodiscard]]int GetTotal() const;
 protected:
     std::vector<Card*> m_Cards;
 private:
