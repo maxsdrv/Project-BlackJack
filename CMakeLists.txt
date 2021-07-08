@@ -8,13 +8,15 @@ include_directories(include)
 set(SOURCE_FILES
         main.cpp
         include/Card.cpp
-        include/Hand.cpp)
+        include/Hand.cpp
+        include/GenericPlayer.cpp
+        include/Player.cpp)
 
 set(HEADER_FILES
         include/Hand.h
         include/Card.h
         include/GenericPlayer.h
-        include/Player.h)
+        include/Player.h include/GenericPlayer.cpp include/Player.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 
