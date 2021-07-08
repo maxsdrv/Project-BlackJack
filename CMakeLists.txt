@@ -12,7 +12,9 @@ set(SOURCE_FILES
 
 set(HEADER_FILES
         include/Hand.h
-        include/Card.h)
+        include/Card.h
+        include/GenericPlayer.h
+        include/Player.h)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 

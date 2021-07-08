@@ -1,6 +1,7 @@
 
 #include "include/Card.h"
 #include "include/Hand.h"
+#include "include/GenericPlayer.h"
 
 
 int main() {
