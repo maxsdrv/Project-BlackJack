@@ -5,9 +5,9 @@
 
 
 int main() {
-    Card d;
+    Card d{Card::rank::ACE, Card::suit::CLUBS};
     std::cout << d;
-    Hand hand;
+   std::cout << '\n' << d.GetValue();
 
     return 0;
 }

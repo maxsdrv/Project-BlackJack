@@ -19,9 +19,8 @@ public:
     };
     explicit Card(rank r = rank::ACE, suit s = suit::SPADES, bool pos = true);
     void Flip();
-    [[nodiscard]]int GetTotal() const;
-    std::pair<size_t, std::string> rangCard(rank r);
-
+    [[nodiscard]]size_t GetValue() const;
+    [[nodiscard]]std::pair<std::string, size_t> getRank() const;
     friend std::ostream& operator<<(std::ostream& os, const Card& card);
 private:
     suit m_Suit;
