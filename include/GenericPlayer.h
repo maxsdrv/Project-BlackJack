@@ -1,5 +1,5 @@
-#ifndef PROJECTPORTFOLIO_GENERICPLAYER_H
-#define PROJECTPORTFOLIO_GENERICPLAYER_H
+#ifndef BLACKJACK_GENERICPLAYER_H
+#define BLACKJACK_GENERICPLAYER_H
 
 #include <iostream>
 #include <utility>
@@ -10,8 +10,8 @@ class GenericPlayer: public Hand {
 public:
     explicit GenericPlayer(std::string  name = "");
     ~GenericPlayer() override;
-    virtual bool isHitting() const = 0;
-    bool isBusted() const;
+    [[nodiscard]]virtual bool isHitting() const = 0;
+    [[nodiscard]]bool isBusted() const;
     void Bust() const;
     friend std::ostream& operator<<(std::ostream& os, const GenericPlayer& aGenericPlayer);
 protected:
@@ -21,4 +21,4 @@ protected:
 
 
 
-#endif //PROJECTPORTFOLIO_GENERICPLAYER_H
+#endif //BLACKJACK_GENERICPLAYER_H

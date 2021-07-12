@@ -1,5 +1,5 @@
-#ifndef PROJECTPORTFOLIO_HAND_H
-#define PROJECTPORTFOLIO_HAND_H
+#ifndef BLACKJACK_HAND_H
+#define BLACKJACK_HAND_H
 
 #include "Card.h"
 
@@ -8,12 +8,12 @@ public:
     Hand();
     virtual ~Hand();
     void Add(Card* pCard);
-    void Clear();
+//    void Clear();
     [[nodiscard]]int GetTotal() const;
 protected:
-    std::vector<Card*> m_Cards;
+    std::vector<std::shared_ptr<Card>> m_Cards;
 private:
 };
 
 
-#endif //PROJECTPORTFOLIO_HAND_H
+#endif //BLACKJACK_HAND_H

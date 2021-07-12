@@ -1,10 +1,11 @@
-#ifndef PROJECTPORTFOLIO_CARD_H
-#define PROJECTPORTFOLIO_CARD_H
+#ifndef BLACKJACK_CARD_H
+#define BLACKJACK_CARD_H
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <memory>
 
 class Card {
 public:
@@ -29,4 +30,4 @@ private:
 };
 
 
-#endif //PROJECTPORTFOLIO_CARD_H
+#endif //BLACKJACK_CARD_H
