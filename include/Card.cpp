@@ -7,8 +7,8 @@ void Card::Flip() {
     m_PositionUp = !(m_PositionUp);
 }
 
-size_t Card::GetValue() const {
-    unsigned int value = 0;
+int Card::GetValue() const {
+    int value = 0;
     if (m_PositionUp) {
         value = getRank().second;
         if (value > 10) {
@@ -30,8 +30,8 @@ std::ostream &operator<<(std::ostream &os, const Card& card) {
     return os;
 }
 
-std::pair<std::string, size_t> Card::getRank() const{
-    static std::unordered_map<Card::rank, std::pair<std::string, size_t>> map{
+std::pair<std::string, int> Card::getRank() const{
+    static std::unordered_map<Card::rank, std::pair<std::string, int>> map{
             {Card::rank::ACE, {"ACE", 11}},
             {Card::rank::TWO, {"TWO", 2}},
             {Card::rank::THREE, {"THREE", 3}},

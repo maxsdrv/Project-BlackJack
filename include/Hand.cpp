@@ -5,22 +5,14 @@ Hand::Hand() {
 }
 
 void Hand::Add(Card *pCard) {
-    m_Cards.push_back(pCard);
-
+    auto card = std::make_shared<Card>(*pCard);
+    m_Cards.push_back(card);
 }
 
 Hand::~Hand() {
-//    Clear();
+    std::cout << "The Hand class destructor invoked" << '\n';
 }
 
-/*void Hand::Clear() {
-    auto it = m_Cards.begin();
-    for (it = m_Cards.begin(); it != m_Cards.end(); ++it) {
-        delete *it;
-        *it = nullptr;
-    }
-    m_Cards.clear();
-}*/
 
 int Hand::GetTotal() const {
     if (m_Cards.empty()) {

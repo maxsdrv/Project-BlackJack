@@ -8,7 +8,6 @@ public:
     Hand();
     virtual ~Hand();
     void Add(Card* pCard);
-//    void Clear();
     [[nodiscard]]int GetTotal() const;
 protected:
     std::vector<std::shared_ptr<Card>> m_Cards;
