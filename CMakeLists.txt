@@ -12,7 +12,8 @@ set(SOURCE_FILES
         include/GenericPlayer.cpp
         include/Player.cpp
         include/House.cpp
-        include/Deck.cpp)
+        include/Deck.cpp
+        include/Game.cpp)
 
 set(HEADER_FILES
         include/Hand.h
@@ -20,7 +21,8 @@ set(HEADER_FILES
         include/GenericPlayer.h
         include/Player.h
         include/House.h
-        include/Deck.h)
+        include/Deck.h
+        include/Game.h)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 

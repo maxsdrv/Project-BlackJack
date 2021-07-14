@@ -4,6 +4,7 @@
 #include "GenericPlayer.h"
 
 class Player: public GenericPlayer {
+public:
     explicit Player(std::string name = "");
     ~Player() override;
 
@@ -11,6 +12,7 @@ class Player: public GenericPlayer {
     void Win() const;
     void Lose() const;
     void Push() const;
+private:
 };
 
 
