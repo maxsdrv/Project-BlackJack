@@ -10,10 +10,10 @@
 class Card {
 public:
     enum class suit {
-        SPADES,
-        HEARTS,
+        CLUBS,
         DIAMONDS,
-        CLUBS
+        HEARTS,
+        SPADES
     };
     enum class rank { ACE = 1, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN,
         JACK, QUEEN, KING
