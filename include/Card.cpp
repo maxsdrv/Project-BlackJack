@@ -10,7 +10,7 @@ void Card::Flip() {
 int Card::GetValue() const {
     int value = 0;
     if (m_PositionUp) {
-        value = static_cast<int>(m_Rank);
+        value = getRank().second;
         if (value > 10) {
             value = 10;
         }
@@ -20,11 +20,8 @@ int Card::GetValue() const {
 }
 
 std::ostream &operator<<(std::ostream &os, const Card& card) {
-    const std::string RANKS[] = {"0", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-    const std::string SUITS[] = {"c", "d", "h", "s"};
     if (card.m_PositionUp) {
-        os << RANKS[static_cast<int>(card.m_Rank)] << " " <<
-              SUITS[static_cast<int>(card.m_Suit)];
+        os << card.getRank().first << " ";
     }
     else {
         os << "XX";
@@ -32,3 +29,24 @@ std::ostream &operator<<(std::ostream &os, const Card& card) {
 
     return os;
 }
+
+std::pair<std::string, int> Card::getRank() const{
+    static std::unordered_map<Card::rank, std::pair<std::string, int>> map{
+            {Card::rank::ACE, {"ACE", 11}},
+            {Card::rank::TWO, {"TWO", 2}},
+            {Card::rank::THREE, {"THREE", 3}},
+            {Card::rank::FOUR, {"FOUR", 4}},
+            {Card::rank::FIVE, {"FIVE", 5}},
+            {Card::rank::SIX, {"SIX", 6}},
+            {Card::rank::SEVEN, {"SEVEN", 7}},
+            {Card::rank::EIGHT, {"EIGHT", 8}},
+            {Card::rank::NINE, {"NINE", 9}},
+            {Card::rank::TEN, {"TEN", 10}},
+            {Card::rank::JACK, {"JACK", 2}},
+            {Card::rank::QUEEN, {"QUEEN", 3}},
+            {Card::rank::KING, {"KING", 4}}
+    };
+
+    return map[m_Rank];
+}
+

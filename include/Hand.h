@@ -1,5 +1,5 @@
-#ifndef PROJECTPORTFOLIO_HAND_H
-#define PROJECTPORTFOLIO_HAND_H
+#ifndef BLACKJACK_HAND_H
+#define BLACKJACK_HAND_H
 
 #include "Card.h"
 
@@ -7,13 +7,12 @@ class Hand {
 public:
     Hand();
     virtual ~Hand();
-    void Add(Card* pCard);
-    void Clear();
-    int GetValue() const;
+    void Add(Card* pCard); //добавляет карту в руку
+    [[nodiscard]]int GetTotal() const; //получаем сумму очков карт в руке
 protected:
-    std::vector<Card*> m_Cards;
+    std::vector<std::shared_ptr<Card>> m_Cards; //используем вектор умных указателей чтобы не думать об освобождении памяти
 private:
 };
 
 
-#endif //PROJECTPORTFOLIO_HAND_H
+#endif //BLACKJACK_HAND_H

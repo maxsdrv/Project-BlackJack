@@ -5,23 +5,14 @@ Hand::Hand() {
 }
 
 void Hand::Add(Card *pCard) {
-    m_Cards.push_back(pCard);
+    auto card = std::make_shared<Card>(*pCard);
+    m_Cards.push_back(card);
 }
 
-Hand::~Hand() {
-    Clear();
-}
+Hand::~Hand() = default;
 
-void Hand::Clear() {
-    auto it = m_Cards.begin();
-    for (it = m_Cards.begin(); it != m_Cards.end(); ++it) {
-        delete *it;
-        *it = nullptr;
-    }
-    m_Cards.clear();
-}
 
-int Hand::GetValue() const {
+int Hand::GetTotal() const {
     if (m_Cards.empty()) {
         return 0;
     }
@@ -29,7 +20,7 @@ int Hand::GetValue() const {
         return 0;
     }
     int total = 0;
-    std::vector<Card*>::const_iterator iterator;
+    std::vector<std::shared_ptr<Card>>::const_iterator iterator;
     for (iterator = m_Cards.begin(); iterator != m_Cards.end(); ++iterator) {
         total += (*iterator)->GetValue();
     }
