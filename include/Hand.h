@@ -7,10 +7,10 @@ class Hand {
 public:
     Hand();
     virtual ~Hand();
-    void Add(Card* pCard);
-    [[nodiscard]]int GetTotal() const;
+    void Add(Card* pCard); //добавляет карту в руку
+    [[nodiscard]]int GetTotal() const; //получаем сумму очков карт в руке
 protected:
-    std::vector<std::shared_ptr<Card>> m_Cards;
+    std::vector<std::shared_ptr<Card>> m_Cards; //используем вектор умных указателей чтобы не думать об освобождении памяти
 private:
 };
 

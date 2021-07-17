@@ -8,10 +8,10 @@ class Deck: public Hand {
 public:
     Deck();
     virtual ~Deck();
-    void Populate();
-    void Shuffle();
-    void Deal(Hand& aHand);
-    void AdditionalCards(GenericPlayer& aGenericPlayer);
+    void Populate(); //создает колоду из 52 карт
+    void Shuffle(); //тасует карты
+    void Deal(Hand& aHand); //раздает одну карту в руку
+    void AdditionalCards(GenericPlayer& aGenericPlayer); //даёт дополнительные карты игроку
 private:
 };
 

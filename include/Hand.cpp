@@ -9,9 +9,7 @@ void Hand::Add(Card *pCard) {
     m_Cards.push_back(card);
 }
 
-Hand::~Hand() {
-    std::cout << "The Hand class destructor invoked" << '\n';
-}
+Hand::~Hand() = default;
 
 
 int Hand::GetTotal() const {

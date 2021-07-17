@@ -21,7 +21,7 @@ int Card::GetValue() const {
 
 std::ostream &operator<<(std::ostream &os, const Card& card) {
     if (card.m_PositionUp) {
-        os << card.getRank().first << " " << card.getRank().second;
+        os << card.getRank().first << " ";
     }
     else {
         os << "XX";

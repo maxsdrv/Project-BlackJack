@@ -8,10 +8,10 @@ public:
     explicit Player(std::string name = "");
     ~Player() override;
 
-    [[nodiscard]]bool isHitting() const override;
-    void Win() const;
-    void Lose() const;
-    void Push() const;
+    [[nodiscard]]bool isHitting() const override; //показывает хочет ли игрок брать карты
+    void Win() const; //объявляет что игрок победил
+    void Lose() const; //объявляет что игрок проиграл
+    void Push() const; //объявляет ничью
 private:
 };
 

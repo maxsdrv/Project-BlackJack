@@ -8,7 +8,6 @@ bool House::isHitting() const {
 }
 
 House::~House() {
-    std::cout << "The Hand class destructor invoke" << std::endl;
 }
 
 void House::FlipFirstCard() {

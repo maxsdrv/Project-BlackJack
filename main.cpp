@@ -1,11 +1,9 @@
-
 #include "include/Card.h"
-#include "include/Hand.h"
-#include "include/GenericPlayer.h"
 #include "include/Game.h"
 
 
 int main() {
+
     std::cout << "\t\tWelcome to BlackJack!\n\n";
     int numPlayers = 0;
     while (numPlayers < 1 || numPlayers > 7) {

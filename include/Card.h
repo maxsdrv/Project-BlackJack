@@ -19,10 +19,10 @@ public:
         JACK, QUEEN, KING
     };
     explicit Card(rank r = rank::ACE, suit s = suit::SPADES, bool pos = true);
-    void Flip();
-    [[nodiscard]]int GetValue() const;
-    [[nodiscard]]std::pair<std::string, int> getRank() const;
-    friend std::ostream& operator<<(std::ostream& os, const Card& card);
+    void Flip(); //переворачиваем карту
+    [[nodiscard]]int GetValue() const; //возвращаем значение карты от 1 до 11
+    [[nodiscard]]std::pair<std::string, int> getRank() const; //возвращаем пару название и ценность карты
+    friend std::ostream& operator<<(std::ostream& os, const Card& card); //перегрузка оператора <<
 private:
     suit m_Suit;
     rank m_Rank;
